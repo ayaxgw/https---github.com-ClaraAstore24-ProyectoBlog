@@ -20,3 +20,9 @@ def registro_usuario(request):
         usuario.save()
 
     return render(request, "BlogALYH/3registro_usuario.html")
+
+def buscar_publicacion(request):
+    return render(request, "BlogALYH/5busqueda_publicacion.html")
+
+def resultado_buscar_publicacion(request):
+    return render(request,"BlogALYH/6resultados_buscar_publicacion.html")
