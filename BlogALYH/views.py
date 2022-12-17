@@ -25,4 +25,9 @@ def buscar_publicacion(request):
     return render(request, "BlogALYH/5busqueda_publicacion.html")
 
 def resultado_buscar_publicacion(request):
-    return render(request,"BlogALYH/6resultados_buscar_publicacion.html")
+    nombre_publicacion = request.GET["nombre_publicacion"]
+
+    publicaciones = Publicaciones.objects.filter(comentarios__icontains=nombre_publicacion)
+
+    return render(request,"BlogALYH/6resultados_buscar_publicacion.html",
+    {"publicaciones":publicaciones})

@@ -1,0 +1,12 @@
+{% extends "BlogALYH/1base.html" %}
+
+{% block Contenido1 %}
+
+<ul>
+    {% for publicacion in publicaciones %}
+        <li>{{publicacion.comentario}}</li>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}

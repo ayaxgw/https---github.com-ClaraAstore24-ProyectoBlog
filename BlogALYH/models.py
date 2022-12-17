@@ -12,5 +12,6 @@ class Registrar(models.Model):
     email = models.EmailField()
 
 class Publicaciones(models.Model):
+    titulo = models.CharField(max_length=20)
     comentarios = models.CharField(max_length=280)
     
